@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostCoronaLife.DK</title>
+    <style>
+        body {
+            font-family: arial;
+            margin: 0;
+            padding: 0;
+            background-color: #ccdbcc;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container {
+            width: 30%;
+            margin: auto;
+            padding: 20px;
+            background: #ccdbcc;
+            box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
+            margin-top: 50px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .menu {
+            background: #aebfae;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .menu a:hover {
+            background: #555;
+        }
+        .search-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px;
+        }
+        input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background: #eee;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .right-menu {
+            width: 200px;
+            background: #ded2bd;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+        .right-menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        .right-menu a:hover {
+            background: #666;
+
+
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="test4.html">Hjem</a>
+        <a href="test3.html">Om os</a>
+        <a href="test5.html">Kontakt</a>
+    </div>
+    
+    <div class="container">
+        <h1>Søgefunktion</h1>
+        <div class="search-container">
+            <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="Søg efter et emne...">
+        </div>
+        <ul id="searchResults">
+            <li>Corona</li>
+            <li>Nedlukning</li>
+            <li>Berørte</li>
+            <li>Hjemmeskole</li>
+            <li>Gjorde Danmark det "rigtige"?</li>
+            <li>Coronanedlukning</li>
+        </ul>
+    </div>
+    
+    <div class="right-menu">
+        <h3>Menu</h3>
+        <a href="test.html">Profil</a>
+        <a href="test2.html">Søgefelt</a>
+        <a href="test6.html">OPUSS</a>
+<a href="test7.html">Fakta</a>
+ <a href="test8.html">Log ud</a>
+ <a href="test9.html">Log ud</a>
+ <a href="test10.html">Log ud</a>
+    </div>
+
+    <script>
+        function searchFunction() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let items = document.querySelectorAll('#searchResults li');
+            
+            items.forEach(item => {
+                if (item.innerText.toLowerCase().includes(input)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
